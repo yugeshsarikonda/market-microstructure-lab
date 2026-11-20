@@ -12,6 +12,7 @@ Checked November 20, 2026. This records local results for the v0.1 prototype.
 | Example replay | Six trades totaling 36 units, final ask at 105 for 6 units |
 | Golden output | Actual executable output saved in `examples/expected.csv` and checked by a CLI test |
 | Repeatability | Replaying the same fixture produced byte-identical CSV output |
+| Linux CI | GCC and Clang jobs passed ordinary and sanitizer checks on GitHub Actions |
 
 Environment: Apple Clang 21.0.0, arm64 macOS, Make 3.81 and Python 3.14.6.
 No third-party library or Python package was installed for this project.
@@ -27,7 +28,8 @@ The CLI tests cover expected trades and depth, exact fixture output, repeated
 replay, malformed inputs, overflow during parsing, duplicate IDs, CRLF, unknown
 cancellations, file/stdin equivalence and missing-file/usage errors.
 
-The CI draft builds with GCC and Clang on Linux and runs ordinary and sanitizer
-checks. It has not executed on GitHub, since no remote repository was created or
-pushed for this prototype. No throughput, latency, live-data, trading-performance
-or user-impact result is claimed.
+The first [GitHub Actions run](https://github.com/yugeshsarikonda/market-microstructure-lab/actions/runs/44822832310)
+passed both compiler jobs against implementation commit
+`aa6d5444ff02d2f904e102ba5d685b46f6f3a89a`. Each job ran the C++ cases and Python
+CLI tests in ordinary and sanitizer builds. No throughput, latency, live-data,
+trading-performance or user-impact result is claimed.

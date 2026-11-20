@@ -4,7 +4,7 @@ A small C++17 limit-order-book simulator for learning how market rules become
 software. It matches orders, records trades and replays synthetic event streams
 deterministically. The matching core uses only the C++ standard library.
 
-**Status: local v0.1 prototype.** Matching and replay work, with tests and a
+**Status: v0.1 prototype.** Matching and replay work, with tests and a
 synthetic example. Participant accounts, strategy agents and experiments on
 market quality are planned extensions. This is a simplified model with explicit
 rules, not a reconstruction of a particular exchange.
@@ -24,7 +24,8 @@ rules, not a reconstruction of a particular exchange.
 Requirements: a C++17 compiler, Make and Python 3.9+ for the CLI tests. No Python
 packages, market-data subscriptions, API keys, CMake or network services are
 needed for the build and tests. The initial local check used Apple Clang 21 on
-macOS with Python 3.14.6. Linux CI is drafted but has not run yet.
+macOS with Python 3.14.6. [Linux CI](https://github.com/yugeshsarikonda/market-microstructure-lab/actions)
+also passed with GCC and Clang, including ordinary and sanitizer checks.
 
 ```sh
 make
