@@ -1,0 +1,19 @@
+event,type,maker,taker,price_ticks,quantity,detail
+2,ACK,,1,,0,resting=10 unfilled=0
+3,ACK,,2,,0,resting=5 unfilled=0
+4,ACK,,3,,0,resting=8 unfilled=0
+5,ACK,,4,,0,resting=12 unfilled=0
+6,TRADE,1,5,101,10,
+6,TRADE,2,5,101,2,
+6,ACK,,5,,12,resting=0 unfilled=0
+7,CANCEL,,2,,,cancelled
+8,TRADE,3,6,103,8,
+8,ACK,,6,,8,resting=0 unfilled=2
+9,ACK,,7,,0,resting=4 unfilled=0
+10,TRADE,7,8,100,4,
+10,TRADE,4,8,99,10,
+10,ACK,,8,,14,resting=0 unfilled=0
+11,TRADE,4,9,99,2,
+11,ACK,,9,,2,resting=0 unfilled=6
+12,ACK,,10,,0,resting=6 unfilled=0
+12,DEPTH,,,105,6,S orders=1

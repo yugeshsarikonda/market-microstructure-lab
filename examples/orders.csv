@@ -1,0 +1,12 @@
+# Handwritten synthetic events. Prices are integer ticks.
+LIMIT,1,S,101,10
+LIMIT,2,S,101,5
+LIMIT,3,S,103,8
+LIMIT,4,B,99,12
+LIMIT,5,B,102,12
+CANCEL,2
+MARKET,6,B,,10
+LIMIT,7,B,100,4
+LIMIT,8,S,98,14
+MARKET,9,S,,8
+LIMIT,10,S,105,6
